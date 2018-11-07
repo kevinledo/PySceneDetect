@@ -5,11 +5,12 @@ FROM jjanzic/docker-python3-opencv:opencv-3.4.1
 ARG SCENEDETECT_VERSION=""
 
 # Install PySceneDetect
-RUN if [ "$SCENEDETECT_VERSION" = "" ]; then \
+RUN apt-get install -y python-pip && \
+    if [ "$SCENEDETECT_VERSION" = "" ]; then \
       pip install scenedetect \
-	else \
+	  else \
       pip install scenedetect=="$SCENEDETECT_VERSION" \
-	fi
+	  fi
 
 # Install MKVToolNix. Before we have to install apt-https support and add sources
 RUN apt-get install -y apt-transport-https \
