@@ -1,6 +1,6 @@
 # PySceneDetect
 
-[![Build Status](https://travis-ci.org/mtlynch/docker-PySceneDetect.svg?branch=master)](https://travis-ci.org/mtlynch/docker-PySceneDetect) [![Docker Pulls](https://img.shields.io/docker/pulls/mtlynch/PySceneDetect.svg?maxAge=604800)](https://hub.docker.com/r/mtlynch/PySceneDetect/)
+[![Build Status](https://travis-ci.org/mtlynch/docker-PySceneDetect.svg?branch=master)](https://travis-ci.org/mtlynch/docker-PySceneDetect) [![Docker Pulls](https://img.shields.io/docker/pulls/mtlynch/pyscenedetect.svg?maxAge=604800)](https://hub.docker.com/r/mtlynch/pyscenedetect/)
 
 `PySceneDetect` (https://pyscenedetect.readthedocs.io/en/latest/) running on `Ubuntu:16.04` with `Python 2.7.x`.
 
@@ -9,19 +9,23 @@
 
 Build on your own:
 
-```
-# docker build https://raw.githubusercontent.com/handflucht/PySceneDetect/master/Dockerfile -t pyscenedetect:latest
+```bash
+# docker build \
+    https://raw.githubusercontent.com/mtlynch/PySceneDetect/master/Dockerfile \
+    --tag pyscenedetect:latest
 ```
 
 or pull:
-```
-# docker pull handflucht/pyscenedetect
+
+```bash
+# docker pull mtlynch/pyscenedetect
 ```
 
 ## Usage
+
 `PySceneDetect` is set as `Entrypoint`:
 
-```
+```bash
 # docker run pyscenedetect
 usage: scenedetect [-h] [-v] -i VIDEO_FILE [-o OUTFILE.mkv] [-co OUTPUT.csv]
                    [-t value] [-m num_frames] [-p percent] [-b rows]
@@ -33,8 +37,11 @@ scenedetect: error: argument -i/--input is required
 
 Analyzing video at `/some/path/video.mp4` and saving each scene to a separate file:
 
-```
-# docker run -v /some/path:/video pyscenedetect:latest -i /video/video.mp4 -o /video/video_parts.mp4
+```bash
+# docker run \
+    --volume /some/path:/video \
+    pyscenedetect:latest \
+       -i /video/video.mp4 -o /video/video_parts.mp4
 [PySceneDetect] Detecting scenes (threshold mode)...
 [PySceneDetect] Parsing video video.mp4...
 [PySceneDetect] Video Resolution / Framerate: 512 x 288 / 25.000 FPS
