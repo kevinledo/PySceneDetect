@@ -1,11 +1,14 @@
 # PySceneDetect
 
+[![Build Status](https://travis-ci.org/mtlynch/docker-PySceneDetect.svg?branch=master)](https://travis-ci.org/mtlynch/docker-PySceneDetect) [![Docker Pulls](https://img.shields.io/docker/pulls/mtlynch/PySceneDetect.svg?maxAge=604800)](https://hub.docker.com/r/mtlynch/PySceneDetect/)
+
 `PySceneDetect` (https://pyscenedetect.readthedocs.io/en/latest/) running on `Ubuntu:16.04` with `Python 2.7.x`.
 
 
 ## Getting the image
 
 Build on your own:
+
 ```
 # docker build https://raw.githubusercontent.com/handflucht/PySceneDetect/master/Dockerfile -t pyscenedetect:latest
 ```
