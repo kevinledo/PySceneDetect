@@ -8,7 +8,7 @@ ARG SCENEDETECT_VERSION=""
 RUN apt-get update && \
     apt-get install -y python-pip && \
     if [ "$SCENEDETECT_VERSION" = "" ]; then \
-      pip install scenedetect; \
+      pip install scenedetect[progress_bar]; \
 	  else \
       pip install scenedetect=="$SCENEDETECT_VERSION"; \
 	  fi
