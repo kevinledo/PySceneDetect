@@ -5,7 +5,8 @@ FROM jjanzic/docker-python3-opencv:opencv-3.4.1
 ARG SCENEDETECT_VERSION=""
 
 # Install PySceneDetect
-RUN apt-get update && \ apt-get install -y python-pip && \
+RUN apt-get update && \
+    apt-get install -y python-pip && \
     if [ "$SCENEDETECT_VERSION" = "" ]; then \
       pip install scenedetect; \
 	  else \
