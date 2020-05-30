@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mtlynch/PySceneDetect.svg?branch=master)](https://travis-ci.org/mtlynch/PySceneDetect) [![Docker Pulls](https://img.shields.io/docker/pulls/mtlynch/pyscenedetect.svg?maxAge=604800)](https://hub.docker.com/r/mtlynch/pyscenedetect/)
 
-`PySceneDetect` (https://pyscenedetect.readthedocs.io/en/latest/) running on `Ubuntu:16.04` with `Python 2.7.x`.
+`PySceneDetect` (https://pyscenedetect.readthedocs.io/en/latest/) running on `Ubuntu:16.04` with `Python 3.7.x`.
 
 
 ## Getting the image
